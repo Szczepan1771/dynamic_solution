@@ -1,0 +1,18 @@
+@import 'src/theme/variables';
+
+.button {
+  @include button_mixin;
+  background-color: $secondary_color;
+  cursor: pointer;
+  transition: .2s;
+
+  &:hover {
+    filter: brightness(2);
+  }
+
+  &_disabled {
+    @include button_mixin;
+    background-color: $disabled_color;
+    pointer-events: none;
+  }
+}

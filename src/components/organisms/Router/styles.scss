@@ -1,0 +1,12 @@
+@import "../../../theme/variables";
+.main_content {
+  flex: 1;
+  padding: 5rem;
+  @media screen and (max-width: $phone_breakpoint) {
+      padding: 2.5rem;
+  }
+
+  @media screen and (min-width: $phone_breakpoint) and (max-width: $mobile_breakpoint) {
+    padding: 3.5rem;
+  }
+}

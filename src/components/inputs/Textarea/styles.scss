@@ -1,0 +1,16 @@
+@import "../../../theme/variables";
+
+.container {
+  @include input_container;
+  &_textarea {
+    font-size: 1.8rem;
+    color: $primary_color;
+    border: none;
+    width: 100%;
+    min-height: 9rem;
+    resize: none;
+    &:focus {
+      outline: none;
+    }
+  }
+}

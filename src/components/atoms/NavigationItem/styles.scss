@@ -1,0 +1,40 @@
+@import "src/theme/variables";
+
+.item {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.8rem;
+  height: 4rem;
+  min-width: 13rem;
+  margin: 0 3rem;
+  cursor: pointer;
+  transition: .2s;
+  &_link {
+    color: $primary_color;
+    transition: .2s;
+    &:hover {
+      color: $secondary_color;
+    }
+    &--active {
+      color: $secondary_color;
+    }
+  }
+  &_bar {
+    transition: .2s;
+    opacity: 0;
+    &--active {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      opacity: 1;
+      height: .2rem;
+      background-color: $secondary_color;
+    }
+  }
+  @media screen and (max-width: $mobile_breakpoint) {
+      height: 8rem;
+  }
+}

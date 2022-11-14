@@ -1,0 +1,10 @@
+@import "src/theme/variables";
+
+.menu {
+  display: flex;
+  justify-content: space-between;
+  margin: 0;
+  height: 10rem;
+  border-bottom: .2rem solid $primary_color;
+  max-width: 100%;
+}

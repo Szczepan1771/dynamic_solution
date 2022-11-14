@@ -1,0 +1,13 @@
+@import 'src/theme/variables';
+.user_profile {
+  display: flex;
+  align-items: flex-start;
+  padding: 2.5rem 0;
+  border-bottom: .1rem solid $secondary_color;
+  @media screen and (max-width: $phone_breakpoint) {
+    padding: .5rem 0;
+  }
+  @media screen and (min-width: $phone_breakpoint) and (max-width: $mobile_breakpoint) {
+    padding: 1.2rem 0;
+  }
+}

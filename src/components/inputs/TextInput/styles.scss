@@ -1,0 +1,14 @@
+@import "../../../theme/variables";
+
+.container {
+  @include input_container;
+  &_input {
+    font-size: 1.8rem;
+    color: $primary_color;
+    border: none;
+    width: 100%;
+    &:focus {
+      outline: none;
+    }
+  }
+}

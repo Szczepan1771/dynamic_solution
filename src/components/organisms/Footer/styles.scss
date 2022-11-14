@@ -1,0 +1,11 @@
+@import "src/theme/variables";
+
+.footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 10rem;
+  font-size: 1.6rem;
+  background-color: $primary_color;
+  color: $secondary_color;
+}

@@ -1,0 +1,9 @@
+@import 'src/theme/variables';
+
+.user_label {
+  font-size: 2.6rem;
+  margin: 0;
+  @media screen and (max-width: $phone_breakpoint){
+    font-size: 1.4rem;
+  }
+}

@@ -1,0 +1,34 @@
+@import 'src/theme/variables';
+
+.profile {
+  display: flex;
+  justify-content: space-around;
+  &_empty {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    & > p {
+      font-size: 2.8rem;
+    }
+  }
+  &_image {
+    align-self: center;
+    width: 50rem;
+    height: 50rem;
+    border-radius: 50%;
+    border: .2rem solid $primary_color;
+    @media screen and (max-width: $phone_breakpoint) {
+      width: 22rem;
+      height: 22rem;
+    }
+  }
+
+  @media screen and (max-width: $phone_breakpoint) {
+    flex-direction: column;
+    justify-content: center;
+  }
+  @media screen and (min-width: $phone_breakpoint) and (max-width: $mobile_breakpoint) {
+    flex-direction: column;
+  }
+}
+
