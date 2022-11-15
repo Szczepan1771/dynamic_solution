@@ -1,4 +1,4 @@
-import { FC, useEffect, useRef, useState } from "react";
+import { ChangeEvent, FC, useEffect, useRef, useState } from "react";
 import { FormInputProps } from "../../../types";
 import { useField, useFormikContext } from "formik";
 import { fileToDataUri } from "../../../utils/fileToDataUri";
@@ -25,6 +25,19 @@ const FileLoader: FC<FormInputProps> = ({name}) => {
         }
     }, [ref, isClick])
 
+    const handleChange = (evt: ChangeEvent<HTMLInputElement>) => {
+        const files = evt.target.files as FileList
+        const file = files[0]
+        if (file.size >= MAX_SIZE) {
+            setFieldError(name, 'The file is too big')
+            return
+        }
+        field.onChange(evt)
+        fileToDataUri(file).then(dataUri => {
+            setFieldValue('avatarFile', dataUri)
+        })
+    }
+
     return (
         <div className={'wrapper_input'}>
             <div className={'file_input'}>
@@ -36,18 +49,7 @@ const FileLoader: FC<FormInputProps> = ({name}) => {
                     accept={'image/png, image/jpg, image/webp'}
                     lang={'en-EN'}
                     {...field}
-                    onChange={(evt => {
-                        const files = evt.target.files as FileList
-                        const file = files[0]
-                        if (file.size >= MAX_SIZE) {
-                            setFieldError(name, 'The file is too big')
-                            return
-                        }
-                        field.onChange(evt)
-                        fileToDataUri(file).then(dataUri => {
-                            setFieldValue('avatarFile', dataUri)
-                        })
-                    })}
+                    onChange={handleChange}
                 />
                 <InteractiveIcon onClick={() => setIsClick(true)} icon={<FiUpload/>}/>
             </div>
