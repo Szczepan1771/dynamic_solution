@@ -1,0 +1,9 @@
+@import "src/theme/variables";
+
+.form_wrapper {
+  width: 70%;
+  margin: 0 auto;
+  @media screen and (max-width: $mobile_breakpoint) {
+    width: 100%;
+  }
+}

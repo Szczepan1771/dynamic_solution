@@ -1,15 +1,8 @@
 export const USER_INFORMATION = 'user_information'
-export type ID = string
 
 export enum Routes {
-    HOME = '/',
-    USER_INFORMATION = '/user-information',
+    USER_INFORMATION = '/',
     USER_PROFILE = '/user-profile'
-}
-
-export type FileType = {
-    size: number
-    type: string
 }
 
 export type FieldType = 'text' | 'file' | 'date' | 'textarea'
@@ -26,5 +19,4 @@ export interface NavigationItemProps {
 
 export interface FormInputProps {
     name: string
-    id: string
 }

@@ -7,13 +7,15 @@ import {
     ValidationUserInformationSchemaType
 } from "./config";
 
+import "./styles.scss"
+
 import { useUserInformation } from "../../hooks/useUserInformation";
 
 const UserInformation = () => {
     const {handleSubmit} = useUserInformation()
 
     return (
-        <div>
+        <div className={'form_wrapper'}>
             <CustomForm<InitialUserFormInformationType, ValidationUserInformationSchemaType>
                 initialValues={initialUserFormInformation}
                 fields={fields}

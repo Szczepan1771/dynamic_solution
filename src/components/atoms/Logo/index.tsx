@@ -2,19 +2,18 @@ import phoneLogo from "../../../assets/logo/star-wars-phone.png"
 import mobileLogo from "../../../assets/logo/star-wars-mobile.png"
 import desktopLogo from "../../../assets/logo/star-wars-desktop.png"
 import "./styles.scss"
-import { useHeader } from "../../../hooks/useHeader";
 
-const Header = () => {
-    const {handleNavigate} = useHeader()
+const Logo = () => {
+
     return (
-        <header className={'header'} onClick={handleNavigate}>
+        <div className={'logo'}>
             <img
-                className={'header_logo'}
+                className={'logo_image'}
                 srcSet={`${phoneLogo}, ${mobileLogo}, ${desktopLogo}`}
                 alt={'Star Wars logo'}
             />
-        </header>
+        </div>
     )
 }
 
-export default Header
+export default Logo

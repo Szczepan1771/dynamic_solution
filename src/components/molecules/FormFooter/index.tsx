@@ -6,9 +6,9 @@ const FormFooter = <T,> () => {
     const {submitForm, isSubmitting, isValid} = useFormikContext<T>()
     const isDisabled = useMemo(() => isSubmitting || !isValid,[isSubmitting, isValid])
     return (
-        <section>
+        <div>
             <Button onClick={ () => !isDisabled && submitForm()} disabled={isDisabled} label={'Add user'}/>
-        </section>
+        </div>
     )
 }
 

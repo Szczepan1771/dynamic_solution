@@ -10,9 +10,9 @@ interface ButtonProps {
 const Button: FC<ButtonProps> = (props) => {
     const {label, disabled, ...rest} = props
     return (
-        <div className={!disabled ? 'button' : 'button_disabled'} {...rest}>
+        <button className={!disabled ? 'button' : 'button_disabled'} {...rest}>
             {label}
-        </div>
+        </button>
     )
 }
 

@@ -1,24 +1,24 @@
-import Header from "../../atoms/Header";
+import Logo from "../../atoms/Logo";
 import Navigation from "../../molecules/Navigation";
 import "./styles.scss"
 import MobileNavigation from "../../molecules/MobileNavigation";
 import { FiMenu } from "react-icons/fi";
 import InteractiveIcon from "../../atoms/InteractiveIcon";
-import { useMenu } from "../../../hooks/useMenu";
+import { useHeader } from "../../../hooks/useHeader";
 
-const Menu = () => {
+const Header = () => {
     const {
         isActive,
         isMobile,
         handleIsActive
-    } = useMenu()
+    } = useHeader()
     return (
-        <menu className={'menu'}>
-            <Header/>
+        <header className={'header'}>
+            <Logo/>
             {(isMobile && !isActive) && <InteractiveIcon onClick={handleIsActive} icon={<FiMenu/>} />}
             {!isMobile ? <Navigation/> : isActive && <MobileNavigation isActive={isActive} handleOpen={handleIsActive}/>}
-        </menu>
+        </header>
     )
 }
 
-export default Menu
+export default Header

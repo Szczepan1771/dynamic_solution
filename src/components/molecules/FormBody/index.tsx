@@ -18,17 +18,15 @@ const FormBody = <T, >({fields}: FormBodyProps) => {
         <form>
             {fields.map(field => {
                     const {name, type} = field
-                    const id = name
-                    const key = name
                     const message = errors[field.name as keyof T] as string
                     const isTouched = !!touched[field.name as keyof T]
                     return (
-                        <div key={key}>
-                            <FormLabel id={id} name={name}/>
-                            {type === 'text' && <TextInput id={id} name={name}/>}
-                            {type === 'textarea' && <Textarea id={id} name={name}/>}
-                            {type === 'file' && <FileLoader id={id} name={name} />}
-                            {type === 'date' && <DateInput id={id} name={name}/>}
+                        <div key={name}>
+                            <FormLabel name={name}/>
+                            {type === 'text' && <TextInput name={name}/>}
+                            {type === 'textarea' && <Textarea name={name}/>}
+                            {type === 'file' && <FileLoader name={name} />}
+                            {type === 'date' && <DateInput name={name}/>}
                             <ErrorMessage touched={isTouched} message={message}/>
                         </div>
                     )

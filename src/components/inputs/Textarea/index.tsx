@@ -3,13 +3,14 @@ import { FC } from "react";
 import { FormInputProps } from "../../../types";
 import './styles.scss'
 
-const Textarea: FC<FormInputProps> = ({name, id}) => {
+const Textarea: FC<FormInputProps> = ({name}) => {
     const [field] = useField(name)
     return (
         <div className={'container'}>
             <textarea
                 className={'container_textarea'}
-                id={id} {...field}
+                id={name}
+                {...field}
             />
         </div>
     )

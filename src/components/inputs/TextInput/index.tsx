@@ -4,11 +4,11 @@ import { useField } from "formik";
 import { FormInputProps } from "../../../types";
 
 
-const TextInput: FC<FormInputProps> = ({name, id}) => {
+const TextInput: FC<FormInputProps> = ({name}) => {
     const [field] = useField(name)
     return (
         <div className={'container'}>
-            <input id={id} className={'container_input'} {...field} />
+            <input id={name} className={'container_input'} {...field} />
         </div>
     )
 }

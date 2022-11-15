@@ -7,6 +7,6 @@ export const createUser = (body: InitialUserFormInformationType) => {
         ...rest,
         avatar: avatarFile
     }).then((data) => {
-        localStorage.setItem(USER_INFORMATION, JSON.stringify(data))
+        sessionStorage.setItem(USER_INFORMATION, JSON.stringify(data))
     })
 }

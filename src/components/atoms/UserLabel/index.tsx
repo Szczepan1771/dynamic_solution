@@ -1,4 +1,4 @@
-import { FC, useMemo } from "react";
+import { FC } from "react";
 import { labelKeys } from "../../../assets/labelKeys";
 import "./styles.scss"
 
@@ -7,8 +7,7 @@ interface UserLabelProps {
 }
 
 const UserLabel: FC<UserLabelProps> = ({name}) => {
-    const label = useMemo(() => labelKeys[name as keyof typeof labelKeys], [name])
-    return <p className={'user_label'}>{label}: </p>
+    return <p className={'user_label'}>{labelKeys[name as keyof typeof labelKeys]}: </p>
 }
 
 export default UserLabel

@@ -3,16 +3,17 @@ import { FormInputProps } from "../../../types";
 import { useField, useFormikContext } from "formik";
 import { fileToDataUri } from "../../../utils/fileToDataUri";
 
-const FileLoader: FC<FormInputProps> = ({name, id}) => {
+const FileLoader: FC<FormInputProps> = ({name}) => {
     const {setFieldValue} = useFormikContext()
     const [field] = useField(name)
 
     return (
         <div>
             <input
-                id={id}
+                id={name}
                 type="file"
                 accept={'image/*'}
+                lang={'en-EN'}
                 {...field}
                 onChange={(evt => {
                     field.onChange(evt)

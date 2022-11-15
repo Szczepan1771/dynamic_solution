@@ -6,17 +6,12 @@ import './styles.scss'
 
 const UserInformationPage = lazy(() => import('../../../views/UserInformation'))
 const UserProfilePage = lazy(() => import('../../../views/UserProfile'))
-const HomePage = lazy(() => import('../../../views/Home'))
 
 const Router = () => {
     return (
         <Suspense fallback={<Loader/>}>
             <main className={'main_content'}>
                 <AppRouter>
-                    <Route
-                        path={Routes.HOME}
-                        element={<HomePage/>}
-                    />
                     <Route
                         path={Routes.USER_INFORMATION}
                         element={<UserInformationPage/>}

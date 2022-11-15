@@ -1,13 +1,27 @@
-import { useNavigate } from "react-router-dom";
-import { Routes } from "../types";
+import { useEffect, useState } from "react";
+import { useIsMobile } from "./useIsMobile";
+import { useLocation } from "react-router-dom";
 
 export const useHeader = () => {
-    const navigate = useNavigate()
-    const handleNavigate = () => {
-        navigate(Routes.HOME)
+    const isMobile = useIsMobile()
+    const [isActive, setIsActive] = useState(() => false)
+    const {pathname} = useLocation()
+
+    useEffect(() => {
+        setIsActive(() => false)
+    }, [pathname])
+
+    const handleIsActive = () => {
+        setIsActive(prevState => !prevState)
     }
 
+    useEffect(() => {
+
+    }, [])
+
     return {
-        handleNavigate
+        isMobile,
+        isActive,
+        handleIsActive
     }
 }

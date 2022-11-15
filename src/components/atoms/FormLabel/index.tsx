@@ -1,16 +1,13 @@
-import { FC, useMemo } from "react";
-import { ID } from "../../../types";
+import { FC } from "react";
 import './styles.scss'
 import { labelKeys } from "../../../assets/labelKeys";
 
 interface FormLabelProps {
-    id?: ID
     name: string
 }
 
-const FormLabel: FC<FormLabelProps> = ({id, name}) => {
-    const label = useMemo(() => labelKeys[name as keyof typeof labelKeys], [name])
-    return <label className={'label'} htmlFor={id}>{label}</label>
+const FormLabel: FC<FormLabelProps> = ({name}) => {
+    return <label className={'label'} htmlFor={name}>{labelKeys[name as keyof typeof labelKeys]}</label>
 }
 
 export default FormLabel
