@@ -7,7 +7,7 @@ import { FiUpload } from "react-icons/fi";
 import './styles.scss'
 import { InitialUserFormInformationType } from "../../../views/UserInformation/config";
 
-const MAX_SIZE = 1204 * 1024
+const MAX_SIZE = 1024 * 1024
 
 const FileLoader: FC<FormInputProps> = ({name}) => {
     const [isClick, setIsClick] = useState(() => false)
