@@ -1,0 +1,29 @@
+@import "src/theme/variables";
+
+.wrapper_input {
+  display: flex;
+  @media screen and (max-width: $mobile_breakpoint){
+    flex-direction: column;
+  }
+}
+
+.file_input {
+  width: 20rem;
+  height: 20rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: .1rem solid $primary_color;
+  & > input {
+    display: none;
+  }
+  & > img {
+    width: 95%;
+    height: 95%;
+  }
+  & svg {
+    width: 7rem;
+    height: 7rem;
+    cursor: pointer;
+  }
+}

@@ -1,18 +1,23 @@
 import { FC } from "react";
 import { FormInputProps } from "../../../types";
-import { useField } from "formik";
+import DatePicker from "react-datepicker";
+import { useField, useFormikContext } from "formik";
+import "react-datepicker/dist/react-datepicker.css";
+import "./styles.scss"
 
 const DateInput: FC<FormInputProps> = ({name}) => {
+    const {setFieldValue} = useFormikContext()
     const [field] = useField(name)
-
+    const {value} = field
     return (
         <div className={'container'}>
-            <input
+            <DatePicker
                 id={name}
-                lang={'en-EN'}
-                className={'container_input'}
-                type={'date'}
+                className={'date_input'}
                 {...field}
+                value={value}
+                selected={value}
+                onChange={(date: Date) => setFieldValue(name, date)}
             />
         </div>
     )

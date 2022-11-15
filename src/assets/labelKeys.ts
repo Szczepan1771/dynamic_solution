@@ -3,7 +3,7 @@ export const labelKeys = {
     lastName: 'Last Name',
     email: 'Email',
     phone: 'Phone',
-    birthday: 'Birthday',
+    birthday: 'Birthday (MM/dd/yyyy)',
     about: 'About',
-    avatar: 'Avatar'
+    avatar: 'Avatar (max size = 1 MB)'
 }
