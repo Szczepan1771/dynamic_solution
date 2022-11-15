@@ -1,4 +1,4 @@
-import FooterContent from "../../atoms/FooterContent";
+import FooterContent from "components/atoms/FooterContent";
 import "./styles.scss"
 
 const Footer = () => {

@@ -1,8 +1,8 @@
 import { FC } from "react";
 import { navigationList } from "../Navigation/config";
-import NavigationItem from "../../atoms/NavigationItem";
+import NavigationItem from "components/atoms/NavigationItem";
 import './styles.scss'
-import InteractiveIcon from "../../atoms/InteractiveIcon";
+import InteractiveIcon from "components/atoms/InteractiveIcon";
 import { FiX } from "react-icons/fi";
 
 interface MobileNavigationProps {

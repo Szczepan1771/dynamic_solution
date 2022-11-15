@@ -1,6 +1,6 @@
 import { useField } from "formik";
 import { FC } from "react";
-import { FormInputProps } from "../../../types";
+import { FormInputProps } from "types";
 import './styles.scss'
 
 const Textarea: FC<FormInputProps> = ({name}) => {

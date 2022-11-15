@@ -1,5 +1,5 @@
 import { navigationList } from "./config";
-import NavigationItem from "../../atoms/NavigationItem";
+import NavigationItem from "components/atoms/NavigationItem";
 import './styles.scss'
 
 const Navigation = () => {

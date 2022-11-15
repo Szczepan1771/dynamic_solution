@@ -1,11 +1,11 @@
-import { ChangeEvent, FC, LegacyRef, MutableRefObject, useEffect, useRef, useState } from "react";
-import { FormInputProps } from "../../../types";
+import { ChangeEvent, FC, MutableRefObject, useEffect, useRef, useState } from "react";
+import { FormInputProps } from "types";
 import { useField, useFormikContext } from "formik";
-import { fileToDataUri } from "../../../utils/fileToDataUri";
-import InteractiveIcon from "../../atoms/InteractiveIcon";
+import { fileToDataUri } from "utils/fileToDataUri";
+import InteractiveIcon from "components/atoms/InteractiveIcon";
 import { FiUpload } from "react-icons/fi";
 import './styles.scss'
-import { InitialUserFormInformationType } from "../../../views/UserInformation/config";
+import { InitialUserFormInformationType } from "views/UserInformation/config";
 
 const MAX_SIZE = 1024 * 1024
 

@@ -1,5 +1,5 @@
 import { FC } from "react";
-import Button from "../../components/atoms/Button";
+import Button from "components/atoms/Button";
 
 interface EmptyProfileDataProps {
     handleRedirect: () => void

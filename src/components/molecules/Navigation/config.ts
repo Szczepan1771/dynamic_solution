@@ -1,4 +1,4 @@
-import { NavigationItemProps, Routes } from "../../../types";
+import { NavigationItemProps, Routes } from "types";
 
 export const navigationList: NavigationItemProps[] = [
     {

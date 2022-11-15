@@ -1,11 +1,11 @@
 import { lazy, Suspense } from "react";
 import { Routes as AppRouter, Route } from "react-router-dom";
-import Loader from "../../atoms/Loader";
-import { Routes } from "../../../types";
+import Loader from "components/atoms/Loader";
+import { Routes } from "types";
 import './styles.scss'
 
-const UserInformationPage = lazy(() => import('../../../views/UserInformation'))
-const UserProfilePage = lazy(() => import('../../../views/UserProfile'))
+const UserInformationPage = lazy(() => import('views/UserInformation'))
+const UserProfilePage = lazy(() => import('views/UserProfile'))
 
 const Router = () => {
     return (

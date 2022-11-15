@@ -1,5 +1,5 @@
 import { useMemo } from "react";
-import Button from "../../atoms/Button";
+import Button from "components/atoms/Button";
 import { useFormikContext } from "formik";
 
 const FormFooter = <T,> () => {

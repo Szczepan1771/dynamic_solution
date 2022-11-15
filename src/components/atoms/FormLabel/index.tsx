@@ -1,6 +1,6 @@
 import { FC } from "react";
 import './styles.scss'
-import { labelKeys } from "../../../assets/labelKeys";
+import { labelKeys } from "assets/labelKeys";
 
 interface FormLabelProps {
     name: string

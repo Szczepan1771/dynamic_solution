@@ -5,7 +5,7 @@ export enum Routes {
     USER_PROFILE = '/user-profile'
 }
 
-export type FieldType = 'text' | 'file' | 'date' | 'textarea'
+export type FieldType = 'text' | 'file' | 'date' | 'textarea' | 'tel'
 
 export interface FormField {
     name: string

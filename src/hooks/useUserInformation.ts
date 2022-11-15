@@ -1,7 +1,7 @@
-import { createUser } from "../services/userInformation";
-import { InitialUserFormInformationType } from "../views/UserInformation/config";
+import { createUser } from "services/userInformation";
+import { InitialUserFormInformationType } from "views/UserInformation/config";
 import { useNavigate } from "react-router-dom";
-import { Routes } from "../types";
+import { Routes } from "types";
 
 export const useUserInformation = () => {
     const navigate = useNavigate()

@@ -1,8 +1,8 @@
 import { useEffect, useState } from "react";
-import { UserInformationType } from "../services/api";
-import { getUserData } from "../services/userProfile";
+import { UserInformationType } from "services/api";
+import { getUserData } from "services/userProfile";
 import { useNavigate } from "react-router-dom";
-import { Routes } from "../types";
+import { Routes } from "types";
 
 export const useProfileData = () => {
     const navigate = useNavigate()

@@ -1,6 +1,6 @@
-import UserProfileData from "../../components/molecules/UserProfileData";
+import UserProfileData from "components/molecules/UserProfileData";
 import './style.scss'
-import { useProfileData } from "../../hooks/useProfileData";
+import { useProfileData } from "hooks/useProfileData";
 import EmptyProfileData from "./EmptyProfileData";
 
 const UserProfile = () => {

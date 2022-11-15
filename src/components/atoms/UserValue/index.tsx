@@ -1,5 +1,5 @@
 import { FC } from "react";
-import { parseDateToString } from "../../../utils/parseDateToString";
+import { parseDateToString } from "utils/parseDateToString";
 import './styles.scss'
 
 interface UserValueProps {

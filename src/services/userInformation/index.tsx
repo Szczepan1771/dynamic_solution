@@ -1,5 +1,5 @@
-import { USER_INFORMATION } from "../../types";
-import { InitialUserFormInformationType } from "../../views/UserInformation/config";
+import { USER_INFORMATION } from "types";
+import { InitialUserFormInformationType } from "views/UserInformation/config";
 
 export const createUser = (body: InitialUserFormInformationType) => {
     const {avatar, avatarFile, ...rest} = body

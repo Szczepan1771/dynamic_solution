@@ -1,6 +1,6 @@
-import phoneLogo from "../../../assets/logo/star-wars-phone.png"
-import mobileLogo from "../../../assets/logo/star-wars-mobile.png"
-import desktopLogo from "../../../assets/logo/star-wars-desktop.png"
+import phoneLogo from "assets/logo/star-wars-phone.png"
+import mobileLogo from "assets/logo/star-wars-mobile.png"
+import desktopLogo from "assets/logo/star-wars-desktop.png"
 import "./styles.scss"
 
 const Logo = () => {

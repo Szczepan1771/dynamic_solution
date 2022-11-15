@@ -1,7 +1,7 @@
-import UserLabel from "../../atoms/UserLabel";
-import { UserInformationType } from "../../../services/api";
+import UserLabel from "components/atoms/UserLabel";
+import { UserInformationType } from "services/api";
 import { FC } from "react";
-import UserValue from "../../atoms/UserValue";
+import UserValue from "components/atoms/UserValue";
 import './styles.scss'
 
 interface UserProfileDataProps {

@@ -1,7 +1,7 @@
 import { Formik } from "formik"
-import FormBody from "../../molecules/FormBody";
-import FormFooter from "../../molecules/FormFooter";
-import { FormField } from "../../../types";
+import FormBody from "components/molecules/FormBody";
+import FormFooter from "components/molecules/FormFooter";
+import { FormField } from "types";
 
 interface CustomFormProps <InitialValuesType, ValidationSchemaType> {
     initialValues: InitialValuesType

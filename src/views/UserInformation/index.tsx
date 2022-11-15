@@ -1,4 +1,4 @@
-import CustomForm from "../../components/organisms/CustomForm";
+import CustomForm from "components/organisms/CustomForm";
 import {
     fields,
     initialUserFormInformation,
@@ -9,7 +9,7 @@ import {
 
 import "./styles.scss"
 
-import { useUserInformation } from "../../hooks/useUserInformation";
+import { useUserInformation } from "hooks/useUserInformation";
 
 const UserInformation = () => {
     const {handleSubmit} = useUserInformation()

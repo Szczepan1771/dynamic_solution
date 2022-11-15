@@ -30,7 +30,7 @@ export const fields: FormField[] = [
         name: 'email',
     },
     {
-        type: 'text',
+        type: 'tel',
         name: 'phone',
     },
     {

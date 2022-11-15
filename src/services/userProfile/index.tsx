@@ -1,4 +1,4 @@
-import { USER_INFORMATION } from "../../types";
+import { USER_INFORMATION } from "types";
 import { UserInformationType } from "../api";
 
 export const getUserData = (): Promise<UserInformationType | null> => {

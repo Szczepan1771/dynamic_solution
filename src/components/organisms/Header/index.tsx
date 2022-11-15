@@ -1,10 +1,10 @@
-import Logo from "../../atoms/Logo";
-import Navigation from "../../molecules/Navigation";
+import Logo from "components/atoms/Logo";
+import Navigation from "components/molecules/Navigation";
 import "./styles.scss"
-import MobileNavigation from "../../molecules/MobileNavigation";
+import MobileNavigation from "components/molecules/MobileNavigation";
 import { FiMenu } from "react-icons/fi";
-import InteractiveIcon from "../../atoms/InteractiveIcon";
-import { useHeader } from "../../../hooks/useHeader";
+import InteractiveIcon from "components/atoms/InteractiveIcon";
+import { useHeader } from "hooks/useHeader";
 
 const Header = () => {
     const {

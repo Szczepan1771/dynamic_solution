@@ -1,5 +1,5 @@
 import { FC } from "react";
-import { FormInputProps } from "../../../types";
+import { FormInputProps } from "types";
 import DatePicker from "react-datepicker";
 import { useField, useFormikContext } from "formik";
 import "react-datepicker/dist/react-datepicker.css";

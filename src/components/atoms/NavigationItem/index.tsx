@@ -1,7 +1,7 @@
 import './styles.scss'
 import { FC } from "react";
-import { useNavigationItem } from "../../../hooks/useNavigationItem";
-import { NavigationItemProps } from "../../../types";
+import { useNavigationItem } from "hooks/useNavigationItem";
+import { NavigationItemProps } from "types";
 import { NavLink } from 'react-router-dom';
 
 const NavigationItem: FC<NavigationItemProps> = ({link, title}) => {

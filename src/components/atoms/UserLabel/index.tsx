@@ -1,5 +1,5 @@
 import { FC } from "react";
-import { labelKeys } from "../../../assets/labelKeys";
+import { labelKeys } from "assets/labelKeys";
 import "./styles.scss"
 
 interface UserLabelProps {
