@@ -1,4 +1,4 @@
-import { ChangeEvent, FC, useEffect, useRef, useState } from "react";
+import { ChangeEvent, FC, LegacyRef, MutableRefObject, useEffect, useRef, useState } from "react";
 import { FormInputProps } from "../../../types";
 import { useField, useFormikContext } from "formik";
 import { fileToDataUri } from "../../../utils/fileToDataUri";
@@ -12,7 +12,7 @@ const MAX_SIZE = 1024 * 1024
 const FileLoader: FC<FormInputProps> = ({name}) => {
     const [isClick, setIsClick] = useState(() => false)
     const {setFieldValue, setFieldError, values} = useFormikContext<InitialUserFormInformationType>()
-    const ref = useRef()
+    const ref = useRef() as MutableRefObject<HTMLInputElement>;
     const [field] = useField(name)
 
     useEffect(() => {
@@ -42,7 +42,6 @@ const FileLoader: FC<FormInputProps> = ({name}) => {
         <div className={'wrapper_input'}>
             <div className={'file_input'}>
                 <input
-                    //@ts-ignore
                     ref={ref}
                     id={name}
                     type="file"
